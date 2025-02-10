@@ -1,23 +1,4 @@
 
-let streak = localStorage.getItem("habitStreak") || 0;
-document.getElementById("streak-count").innerText = streak;
-
-function setHabitReminder() {
-    let habit = document.getElementById("habit-name").value;
-    let time = document.getElementById("reminder-time").value;
-
-    if (habit === "" || time === "" || time <= 0) {
-        alert("Please enter a valid habit and time.");
-        return;
-    }
-
-    alert("Habit reminder set! You will be reminded in " + time + " seconds.");
-
-    setTimeout(() => {
-        alert(" Time to do your habit: " + habit);
-        updateStreak();
-    }, time * 1000);
-}
   // Habit List
     document.addEventListener("DOMContentLoaded", function () {
         const habitForm = document.getElementById("habit-form");
