@@ -1,45 +1,24 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Option to Form</title>
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+  
+ <h2> Habit Progress Tracker</h2>
+        <p>Track your habit streak with a progress bar and heatmap.</p>
+        <h3 id="streak-display-2"> Current Streak: 0 Days</h3>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <h3> Calendar View</h3>
+        <div id="calendar"></div>
+        <button id="check-in1"> Mark Habit Done Today</button>
 
-    <h2>Dynamic Dropdown</h2>
-
-    <form>
-        <label for="dropdown">Choose an option:</label>
-        <select id="dropdown">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-        </select>
-
-        <br><br>
-
-        <label for="newOption">New Option:</label>
-        <input type="text" id="newOption">
-        <button type="button" onclick="addOption()">Add Option</button>
-    </form>
-
-    <script>
-        function addOption() {
-            let newOptionText = document.getElementById("newOption").value;
-            if (newOptionText.trim() !== "") {
-                let select = document.getElementById("dropdown");
-                let newOption = document.createElement("option");
-                newOption.text = newOptionText;
-                newOption.value = newOptionText.toLowerCase().replace(/\s+/g, "_");
-                select.appendChild(newOption);
-                alert("Option Added!");
-            } else {
-                alert("Please enter a valid option.");
-            }
-        }
-    </script>
-
+   
 </body>
 </html>
-
