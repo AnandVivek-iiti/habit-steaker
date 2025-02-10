@@ -1,5 +1,5 @@
 
-  // Habit List
+   // Habit List
     document.addEventListener("DOMContentLoaded", function () {
         const habitForm = document.getElementById("habit-form");
         const habitInput = document.getElementById("habit-input");
