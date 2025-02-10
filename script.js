@@ -1,5 +1,4 @@
-let div=document.querySelectorAll("box");
-div.append(button="click");
+
 let streak = localStorage.getItem("habitStreak") || 0;
 document.getElementById("streak-count").innerText = streak;
 
