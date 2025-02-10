@@ -8,30 +8,22 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <h2>you can create list of habits </h2>
-    <div  > wake up at 6 am </div>
-        <div id="reading">Book Reading</div>
-        <div id="exercise">20 minutes exercise</div>
-        <form class="form-container">
-            <label for="habit1">Enter your first habit:</label><br>
-                <input type="text" id="habit1" placeholder="eg. wake up early" required><br>
-                 <label for="habit2">Enter your second habit:</label><br>
-                <input type="text" id="habit2" placeholder="eg. 1 hour reading" required><br>
-                <label for="habit3">Enter your third habit:</label><br>
-                <input type="text" id="habit3" placeholder="eg. 30 minutes exercise" required><br>
-                <label for="habit4">Enter your four habit:</label><br>
-                <input type="text" id="habit4" placeholder="any other habit" required><br>
-               
-        </form>
-        <script>
-           function getHabits(){
-            const name = document.getElementById('habit1').value;
-           }
-        function setHabits(){
-            
-        }
-            
-        </script>
-</body>
-</html>
+  
+     <h2>📋 Your Habit List</h2>
+     <ul id="habit-container">
+         <li> Wake up at 6 AM</li>
+         <li> Book Reading</li>
+         <li> 20 minutes Exercise</li>
+     </ul>
+     <form id="habit-form">
+         <input type="text" id="habit-input" placeholder="Enter a new habit" required>
+         <button type="submit">Add Habit</button>
+     </form>
+     <h3> Habit Preview:</h3>
+     <p id="preview-habit"></p>
+     <button id="clear-habits">🗑 Clear All Habits</button>
+
+        </body>
+        </html>
+   
 
