@@ -1,61 +1,283 @@
-*{
-     margin: 0%;
-     padding: 0%;
-     color: black;
-     box-sizing: border-box;
-     text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
-#heading1{
-    text-decoration: solid;
-    color: blue;
-    text-align: center;
-}
+
 body {
-    background-color: azure;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: normal;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
-main {
-    text-align: justify;
+
+header {
+  background-color: azure;
+  color: rgb(17, 149, 244);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .box {
-    margin-top:0.5%;
-    height: 100px;
-    
-    /* width: 600px;  */
-    /* background-color: rgb(61, 86, 161); */
-    border: 3px slategray solid;
-    border-radius: 5%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
 }
-nav {
-    width: 50%;
-    text-align: center;
-    background-color: #007bff;
-    padding: 10px 0;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-   
-  }
-  .form-container {
-    flex: 1;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .form-container input, .form-container textarea, .form-container button {
-    width: 50%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  .form-container textarea {
-    resize: vertical;
-  }
+
+.box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.box p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.box a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.box a:hover {
+  background-color: #0056b3;
+}
+
+#habit-container {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+#habit-container li {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#habit-container li button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#habit-container li button:hover {
+  background-color: #cc0000;
+}
+
+#habit-form {
+  margin-bottom: 20px;
+}
+
+#habit-form input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#habit-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#habit-form button:hover {
+  background-color: #0056b3;
+}
+
+#preview-habit {
+  font-style: italic;
+  color: #888;
+}
+
+#clear-habits {
+  padding: 10px 15px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#clear-habits:hover {
+  background-color: #cc0000;
+}
+
+#streak-display-1, #streak-display-2 {
+  color: #28a745;
+  font-size: 1.8rem;
+}
+
+#last-updated {
+  font-style: italic;
+  color: #888;
+}
+
+#check-in, #reset-button, #set-reminder, #check-in1, #set-reminder-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#check-in:hover, #reset-button:hover, #set-reminder:hover, #check-in1:hover, #set-reminder-btn:hover {
+  background-color: #0056b3;
+}
+
+#reset-button {
+  background-color: #ff4d4d;
+}
+
+#reset-button:hover {
+  background-color: #cc0000;
+}
+
+/* Progress Bar Styles */
+#progress-container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  height: 20px;
+  width: 0%;
+  background-color: #28a745;
+  text-align: center;
+  color: white;
+  line-height: 20px;
+  transition: width 0.5s ease;
+}
+
+/* Calendar Heatmap Styles */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.day {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  background-color: #ddd;
+  font-size: 0.9rem;
+}
+
+.day.completed {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Reminder Section Styles */
+.habit-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.habit-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.habit-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.habit-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.habit-container button:hover {
+  background-color: #0056b3;
+}
+
+.streak {
+  color: #28a745;
+  font-weight: bold;
+}
