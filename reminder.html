@@ -12,15 +12,16 @@
 <body>
 
     <h2>Habit Streak Reminder</h2>
-    
+         <form id="reminder-form"></form>
     <div class="habit-container">
         <label for="habit-name">Habit Name:</label> 
         <input type="text" id="habit-name" placeholder="Enter habit">
-        
-        <label for="reminder-time">Reminder (Seconds):</label>
-        <input type="number" id="reminder-time" placeholder="Enter time in sec">
-        
-        <button onclick="setHabitReminder()">Set Reminder</button>
+       
+            <label for="reminder-time">Set Reminder Time:</label>
+            <input type="time" id="reminder-time" required />
+            <button type="submit" onclick="setHabitReminder()" >Set Reminder</button>
+      
+          </form>
 
         <p>Current Streak: <span class="streak" id="streak-count">0</span> Days</p>
     </div>
